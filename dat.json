@@ -1,0 +1,15 @@
+{
+    "title": "{{ title }}",
+    "description": "{{ description }}",
+    "type": [
+        "website", "HAXcms"
+    ],
+    "links": {
+        "license": [
+            {
+                "href": "{{ licenseLink }}",
+                "title": "{{ licenseName }}"
+            }
+        ]
+    }
+}
