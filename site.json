@@ -9,16 +9,16 @@
         "site": {
             "name": "heymp",
             "created": 1572556850,
-            "updated": 1572556850,
+            "updated": 1572706555,
             "git": {
                 "vendor": "github",
                 "branch": "gh-pages"
             }
         },
         "theme": {
-            "element": "killswitch-theme",
+            "element": "switch-horizon-theme",
             "path": "@lrnwebcomponents\/learn-two-theme\/learn-two-theme.js",
-            "name": "Killswitch Theme",
+            "name": "switch-horizon-theme",
             "variables": {
                 "image": "assets\/banner.jpg",
                 "hexCode": "#aeff00",
@@ -82,6 +82,7 @@
             "metadata": {
                 "created": 1572556849,
                 "updated": 1572665544,
+                "layout": "home",
                 "readtime": 1,
                 "contentDetails": {
                     "headings": 0,
@@ -92,6 +93,34 @@
                     },
                     "elements": 1
                 }
+            }
+        },
+        {
+            "id": "item-26e14418-eb12-4b40-90ea-b0a7a13a92d7",
+            "indent": 0,
+            "location": "pages\/articles\/index.html",
+            "order": "2",
+            "parent": null,
+            "title": "Articles",
+            "description": "",
+            "metadata": {
+                "created": 1572706514,
+                "updated": 1572706555,
+                "layout": "default"
+            }
+        },
+        {
+            "id": "item-b3ea06c4-556e-4f5e-8889-6acb79840457",
+            "indent": "1",
+            "location": "pages\/articles\/1\/index.html",
+            "order": "0",
+            "parent": "item-26e14418-eb12-4b40-90ea-b0a7a13a92d7",
+            "title": "Article 1",
+            "description": "",
+            "metadata": {
+                "created": 1572706525,
+                "updated": 1572706683,
+                "layout": "article"
             }
         }
     ]

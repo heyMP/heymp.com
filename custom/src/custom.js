@@ -7,4 +7,4 @@
 // don't import that directory, we'd recommend copy and pasting it in here or
 // creating your own theme based on it
 
-import "./killswitch-theme.js"
+import "./switch-horizon-theme.js"

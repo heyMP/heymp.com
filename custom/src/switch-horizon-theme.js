@@ -4,7 +4,7 @@ import { autorun, toJS } from "mobx/lib/mobx.module.js";
 import { store } from "@lrnwebcomponents/haxcms-elements/lib/core/haxcms-site-store.js";
 import { stylesFromTemplate } from "@polymer/polymer/lib/utils/style-gather.js";
 
-class KillswitchTheme extends HAXCMSTheme(PolymerElement) {
+class SwitchHorizonTheme extends HAXCMSTheme(PolymerElement) {
   static get properties() {
     return {
       layout: { type: String, value: "default", observer: "__layoutChanged"}
@@ -113,6 +113,7 @@ class KillswitchTheme extends HAXCMSTheme(PolymerElement) {
         }
       }
     }
+    return "default"
   }
 
   templateReady(e) {
@@ -173,4 +174,4 @@ class KillswitchTheme extends HAXCMSTheme(PolymerElement) {
     `;
   }
 }
-window.customElements.define("killswitch-theme", KillswitchTheme);
+window.customElements.define("switch-horizon-theme", SwitchHorizonTheme);

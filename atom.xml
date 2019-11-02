@@ -3,11 +3,35 @@
   <title>heymp</title>
   <link href="/atom.xml" rel="self" />
   <subtitle>Blog for heyMP</subtitle>
-  <updated>2019-10-31T21:20:50+00:00</updated>
+  <updated>2019-11-02T14:55:55+00:00</updated>
   <author>
       <name></name>
   </author>
   <id>/feed</id>
+  <entry>
+    <title>Article 1</title>
+    <id>/articles/articles/1</id>
+    <updated>2019-11-02T14:58:03+00:00</updated>
+    <published>2019-11-02T14:55:25+00:00</published>
+    <summary></summary>
+    <link href="/articles/articles/1"/>
+    
+    <content type="html">
+      <![CDATA[ <p>Ex uno Plures</p> ]]>
+    </content>
+  </entry>
+  <entry>
+    <title>Articles</title>
+    <id>/articles</id>
+    <updated>2019-11-02T14:55:55+00:00</updated>
+    <published>2019-11-02T14:55:14+00:00</published>
+    <summary></summary>
+    <link href="/articles"/>
+    
+    <content type="html">
+      <![CDATA[ <p>Ex uno Plures</p> ]]>
+    </content>
+  </entry>
   <entry>
     <title>Welcome to a new HAXcms site!</title>
     <id>/welcome</id>
