@@ -16,9 +16,9 @@
             }
         },
         "theme": {
-            "element": "learn-two-theme",
+            "element": "killswitch-theme",
             "path": "@lrnwebcomponents\/learn-two-theme\/learn-two-theme.js",
-            "name": "Learn",
+            "name": "Killswitch Theme",
             "variables": {
                 "image": "assets\/banner.jpg",
                 "hexCode": "#aeff00",

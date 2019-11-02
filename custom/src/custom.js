@@ -6,3 +6,5 @@
 // https://github.com/elmsln/lrnwebcomponents/blob/master/elements/example-haxcms-theme/example-haxcms-theme.js
 // don't import that directory, we'd recommend copy and pasting it in here or
 // creating your own theme based on it
+
+import "./killswitch-theme.js"
