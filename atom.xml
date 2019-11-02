@@ -1,27 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>heymp</title>
-  <link href="heymp.com/atom.xml" rel="self" />
-  <subtitle></subtitle>
-  <updated>2019-10-31T21:20:49+00:00</updated>
+  <link href="/atom.xml" rel="self" />
+  <subtitle>Blog for heyMP</subtitle>
+  <updated>2019-10-31T21:20:50+00:00</updated>
   <author>
       <name></name>
   </author>
-  <id>heymp.com/feed</id>
+  <id>/feed</id>
   <entry>
     <title>Welcome to a new HAXcms site!</title>
-    <id>heymp.com/welcome</id>
-    <updated>2019-10-31T21:20:49+00:00</updated>
+    <id>/welcome</id>
+    <updated>2019-11-02T03:32:24+00:00</updated>
     <published>2019-10-31T21:20:49+00:00</published>
-    <summary></summary>
-    <link href="heymp.com/welcome"/>
+    <summary>asdf</summary>
+    <link href="/welcome"/>
     
     <content type="html">
-      <![CDATA[ <p>
-    To get started, hit the edit pencil on the side.
-    Now this content is editable in place so select and delete it to start your journey!
-    If you need to learn more about the HAX editor or HAXcms check out <a href="https://haxtheweb.org/ux-concepts" target="_blank" rel="noopener noreferrer">HAXTheWeb.org</a>!
-</p> ]]>
+      <![CDATA[ <p>asdf</p>
+ ]]>
     </content>
   </entry>
 </feed>

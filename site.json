@@ -78,12 +78,21 @@
             "order": 0,
             "parent": null,
             "title": "Welcome to a new HAXcms site!",
-            "description": "",
+            "description": "asdf",
             "metadata": {
                 "created": 1572556849,
-                "updated": 1572556849
+                "updated": 1572665544,
+                "readtime": 1,
+                "contentDetails": {
+                    "headings": 0,
+                    "paragraphs": 1,
+                    "schema": [],
+                    "tags": {
+                        "p": 1
+                    },
+                    "elements": 1
+                }
             }
         }
-    ],
-    "location": "\/sites\/heymp\/index.html"
+    ]
 }
