@@ -8,23 +8,25 @@ type Props = HTMLAttributes<"div">;
 const { class: className, ...props } = Astro.props;
 ---
 
-<Accent class:list={[className, 'accent']} {...props}>
+<Accent lean={6} class:list={[className, 'accent']} {...props}>
   <div class="mark"><Mark /></div>
   <h2><a href="/">{SITE_TITLE}</a></h2>
 </Accent>
 
 <style>
   .accent {
-    --fill: var(--black);
     --mark-size: 50px;
-    display: flex;
-    align-items: center;
-    background: var(--fill);
-    position: relative;
     margin: 0;
-    gap: var(--size-fluid-1);
     margin-inline-start: -1rem;
     margin-inline-end: calc((var(--width) / 2) + .5rem);
+  }
+  .accent :global(.accent-inner) {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: var(--size-fluid-1);
+    padding-inline-start: 100px;
+    margin-inline-start: calc(-100px + 2rem);
   }
   .mark {
     width: clamp(30px, 5vw, 80px);

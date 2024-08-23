@@ -1,44 +1,34 @@
 ---
 import type { HTMLAttributes } from "astro/types";
-type Space = "1" | "2" | "3" | "4";
 type Props = HTMLAttributes<"div"> & {
-  space?: Space;
+  lean?: number;
 };
-const { space, class: className, ...props } = Astro.props;
-const spaceSizeDefault: Space = "2";
-const spaceSize = `var(--size-${space ?? spaceSizeDefault})`;
+const { lean, class: className, ...props } = Astro.props;
+const leanSize = `var(--size-${lean ?? '4'})`;
 ---
 
 <div class="accent" class:list={[className]} {...props}>
-  <slot />
+  <div class="accent-inner">
+    <slot />
+  </div>
 </div>
 
-<style define:vars={{ spaceSize }}>
+<style define:vars={{ leanSize }}>
   .accent {
-    --width: 5rem;
+    --fill: var(--black);
+    filter: drop-shadow(white 1px 1px 1px) drop-shadow(black 2px 2px 0px) ;
+    margin-block-end: 0.5rem;
+    margin-inline: calc((var(--leanSize) + .5rem) * -1);
+  }
+  .accent-inner {
     position: relative;
     color: white;
-    padding: var(--spaceSize);
-    margin-block-end: calc(var(--spaceSize) + var(--size-4));
-    margin-inline-start: .5rem;
-  }
-
-  .accent::before {
-    --fill: var(--black);
     display: block;
-    content: "";
-    position: absolute;
+    clip-path: polygon(var(--leanSize) 0, 100% 0%, calc(100% - var(--leanSize)) 100%, 0% 100%);
+    padding-inline: var(--leanSize);
     background: var(--fill);
-    width: calc(100% + var(--width));
-    height: 100%;
-    top: 0px;
-    right: 0px;
-    transform: skew(-10deg, -10deg) rotate(10deg) translateX(2em);
-    z-index: 0;
-    margin-left: 2em;
-    box-shadow:
-      white 1px 1px 3px,
-      black 2px 2px 0px;
+    padding-inline: calc(var(--leanSize) + 1rem);
+    padding-block: 1rem;
   }
 
   .accent :global(> *) {
