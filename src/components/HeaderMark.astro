@@ -1,0 +1,46 @@
+---
+import Mark from './Mark.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<div class="header-name">
+	<div class="mark"><Mark /></div>
+	<h2><a href="/">{SITE_TITLE}</a></h2>
+	<span class="accent"></span>
+</div>
+
+<style>
+	.header-name {
+		--fill: var(--black);
+		display: flex;
+		align-items: center;
+		background: var(--fill);
+		position: relative;
+	}
+	.header-name > * {
+		z-index: 1;
+	}
+	.header-name::before {
+		display: block;
+		content: '';
+    position: absolute;
+    background: var(--fill);
+    width: calc(100% + 5em);
+    height: 100%;
+    top: 0px;
+    right: 0px;
+    transform: skew(-10deg, -10deg) rotate(10deg) translateX(2em);
+    z-index: 0;
+    margin-left: 2em;
+    box-shadow: white 1px 1px 3px, black 2px 2px 0px;
+	}
+	.mark {
+		width: 100px;
+		fill: var(--fill);
+	}
+	a {
+		font-size: var(--font-size-fluid-2);
+		text-decoration: none;
+		color: white;
+	}
+</style>

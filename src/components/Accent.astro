@@ -1,0 +1,45 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+type Space = '1' | '2' | '3' | '4';
+type Props = HTMLAttributes<'div'> & {
+	space?: Space;
+};
+const { space, class: className, ...props } = Astro.props;
+const spaceSizeDefault: Space = '2';
+const spaceSize = `var(--size-${space ?? spaceSizeDefault})`
+---
+
+<div class="container" class:list={[className]} {...props}>
+	<slot />
+</div>
+
+<style define:vars={{ spaceSize }}>
+	.container {
+		position: relative;
+		color: white;
+		padding: var(--spaceSize);
+		margin-block-end: calc(var(--spaceSize) + var(--size-4));
+	}
+
+	.container::before {
+		--fill: var(--black);
+		display: block;
+		content: '';
+		position: absolute;
+		background: var(--fill);
+		width: calc(100% + 5em);
+		height: 100%;
+		top: 0px;
+		right: 0px;
+		transform: skew(-10deg, -10deg) rotate(10deg) translateX(2em);
+		z-index: 0;
+		margin-left: 2em;
+		box-shadow: white 1px 1px 3px, black 2px 2px 0px;
+	}
+
+	.container :global(> *) {
+		margin: 0;
+		z-index: 1;
+		position: relative;
+	}
+</style>
