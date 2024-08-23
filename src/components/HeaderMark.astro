@@ -1,46 +1,40 @@
 ---
-import Mark from './Mark.astro';
-import { SITE_TITLE } from '../consts';
+import Mark from "./Mark.astro";
+import Accent from "./Accent.astro";
+import { SITE_TITLE } from "../consts";
+
+import type { HTMLAttributes } from "astro/types";
+type Props = HTMLAttributes<"div">;
+const { class: className, ...props } = Astro.props;
 ---
 
-<div class="header-name">
-	<div class="mark"><Mark /></div>
-	<h2><a href="/">{SITE_TITLE}</a></h2>
-	<span class="accent"></span>
-</div>
+<Accent class:list={[className, 'accent']} {...props}>
+  <div class="mark"><Mark /></div>
+  <h2><a href="/">{SITE_TITLE}</a></h2>
+</Accent>
 
 <style>
-	.header-name {
-		--fill: var(--black);
-		display: flex;
-		align-items: center;
-		background: var(--fill);
-		position: relative;
-	}
-	.header-name > * {
-		z-index: 1;
-	}
-	.header-name::before {
-		display: block;
-		content: '';
-    position: absolute;
+  .accent {
+    --fill: var(--black);
+    --mark-size: 50px;
+    display: flex;
+    align-items: center;
     background: var(--fill);
-    width: calc(100% + 5em);
-    height: 100%;
-    top: 0px;
-    right: 0px;
-    transform: skew(-10deg, -10deg) rotate(10deg) translateX(2em);
-    z-index: 0;
-    margin-left: 2em;
-    box-shadow: white 1px 1px 3px, black 2px 2px 0px;
-	}
-	.mark {
-		width: 100px;
-		fill: var(--fill);
-	}
-	a {
-		font-size: var(--font-size-fluid-2);
-		text-decoration: none;
-		color: white;
-	}
+    position: relative;
+    margin: 0;
+    gap: var(--size-fluid-1);
+    margin-inline-start: -1rem;
+    margin-inline-end: calc((var(--width) / 2) + .5rem);
+  }
+  .mark {
+    width: clamp(30px, 5vw, 80px);
+    fill: var(--fill);
+  }
+  h2 {
+    font-size: clamp(20px, 3vw, 40px);
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
 </style>
