@@ -1,11 +1,15 @@
 ---
 import HeaderLink from './HeaderLink.astro';
+import Mark from './Mark.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
 <header>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<div class="header-name">
+			<div class="mark"><Mark /></div>
+			<h2><a href="/">{SITE_TITLE}</a></h2>
+		</div>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
@@ -48,6 +52,13 @@ import { SITE_TITLE } from '../consts';
 		padding: 0 1em;
 		background: white;
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+	}
+	.header-name {
+		display: flex;
+		align-items: center;
+	}
+	.mark {
+		width: 100px;
 	}
 	h2 {
 		margin: 0;
