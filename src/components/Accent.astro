@@ -1,10 +1,14 @@
 ---
 import type { HTMLAttributes } from "astro/types";
 type Props = HTMLAttributes<"div"> & {
-  lean?: number;
+  lean?: 'sm' | 'md' | 'lg';
 };
 const { lean, class: className, ...props } = Astro.props;
-const leanSize = `var(--size-${lean ?? '4'})`;
+const leanSize = {
+  sm: `var(--size-4)`,
+  md: `var(--size-8)`,
+  lg: `var(--size-10)`,
+}[lean ?? 'sm']
 ---
 
 <div class="accent" class:list={[className]} {...props}>

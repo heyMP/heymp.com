@@ -8,7 +8,7 @@ type Props = HTMLAttributes<"div">;
 const { class: className, ...props } = Astro.props;
 ---
 
-<Accent lean={6} class:list={[className, 'accent']} {...props}>
+<Accent lean={'md'} class:list={[className, 'accent']} {...props}>
   <div class="mark"><Mark /></div>
   <h2><a href="/">{SITE_TITLE}</a></h2>
 </Accent>
